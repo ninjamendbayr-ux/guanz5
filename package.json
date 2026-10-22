@@ -1,0 +1,12 @@
+{
+    "name": "haais-canteen",
+    "version": "1.0.0",
+    "description": "Дархан ХААИС зоогийн газрын вэбсайт — backend, database болон Admin Dashboard-тай",
+    "private": true,
+    "scripts": {
+        "start": "node server.js"
+    },
+    "engines": {
+        "node": ">=22.5"
+    }
+}

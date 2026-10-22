@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#12564a">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Администраторын хяналтын самбар — захиалга удирдах.">
+    <title>Admin Dashboard — Дархан ХААИС зоогийн газар</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+    <svg class="sr-only" aria-hidden="true">
+        <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path></symbol>
+        <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></symbol>
+        <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"></path></symbol>
+        <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+        <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+        <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M20 4c-8 0-14 4-14 10a6 6 0 0 0 6 6c6 0 8-7 8-16Z"></path><path d="M4 21c3-6 7-9 12-12"></path></symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></symbol>
+        <symbol id="icon-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5V13M12 16.5h.01"></path></symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></symbol>
+        <symbol id="icon-minus" viewBox="0 0 24 24"><path d="M5 12h14"></path></symbol>
+        <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"></path></symbol>
+        <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></symbol>
+        <symbol id="icon-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20M6 15h3"></path></symbol>
+        <symbol id="icon-cash" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><circle cx="12" cy="12" r="3"></circle><path d="M6 9h.01M18 15h.01"></path></symbol>
+        <symbol id="icon-ticket" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 0 0 4v6h18v-6a2 2 0 0 0 0-4V5H3v2Z"></path><path d="M13 5v2M13 11v2M13 17v2"></path></symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5Z"></path></symbol>
+        <symbol id="icon-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10M3 10l2-6h14l2 6"></path><path d="M8 10a4 4 0 0 0 8 0M9 20v-5h6v5"></path></symbol>
+        <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></symbol>
+        <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3ZM5 14l.8 2.2L8 17l-2.2.8L5 20l-.8-2.2L2 17l2.2-.8L5 14ZM19 12l.8 2.2L22 15l-2.2.8L19 18l-.8-2.2L16 15l2.2-.8L19 12Z"></path></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"></rect><path d="m3 7 9 6 9-6"></path></symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 3 8.4 7 10 4-1.6 7-5.6 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+        <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6"></path><path d="M20 4v4h-4"></path></symbol>
+    </svg>
+
+    <div class="announcement">
+        <div class="container announcement-inner">
+            <span class="announcement-dot"></span>
+            <span><strong>Admin:</strong> зөвхөн админ эрхтэй хэрэглэгч нэвтэрч ашиглана</span>
+            <span class="announcement-separator">•</span>
+            <span class="announcement-secondary">Захиалгын төлөв database-д шууд шинэчлэгдэнэ</span>
+        </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html" aria-label="Дархан ХААИС зоогийн газрын нүүр хуудас">
+                <span class="brand-mark">
+                    <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+                        <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"></circle>
+                        <circle cx="32" cy="17" r="5" fill="currentColor"></circle>
+                        <path d="M14 44c4-9 10-13 18-13s14 4 18 13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                        <text x="32" y="54" text-anchor="middle" font-size="9" font-weight="800" fill="currentColor" font-family="Manrope, sans-serif">HAAIS</text>
+                    </svg>
+                </span>
+                <span class="brand-copy">
+                    <strong>Дархан ХААИС</strong>
+                    <small>Зоогийн газар</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Үндсэн цэс">
+                <a class="nav-link" href="index.html">Нүүр</a>
+                <a class="nav-link" href="menu.html">Цэс</a>
+                <a class="nav-link" href="orders.html">Захиалга</a>
+                <a class="nav-link" href="about.html">Бидний тухай</a>
+                <a class="nav-link" href="contact.html">Холбоо барих</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-button mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Цэсийн жагсаалт нээх" aria-expanded="false">
+                    <svg class="icon"><use href="#icon-menu"></use></svg>
+                </button>
+                <button class="icon-button" id="themeButton" type="button" aria-label="Харааны өнгө солих">
+                    <svg class="icon theme-icon-light"><use href="#icon-moon"></use></svg>
+                    <svg class="icon theme-icon-dark"><use href="#icon-sun"></use></svg>
+                </button>
+                <a class="account-button" id="accountButton" href="login.html" aria-label="Бүртгэл ба нэвтрэх">
+                    <svg class="icon"><use href="#icon-user"></use></svg>
+                    <span class="account-name" id="accountName">Нэвтрэх</span>
+                </a>
+                <a class="cart-trigger" id="cartButton" href="cart.html" aria-label="Сагсны хуудас руу очих">
+                    <svg class="icon"><use href="#icon-bag"></use></svg>
+                    <span class="cart-badge" id="cartBadge" hidden>0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="top" class="page-shell">
+        <div class="container">
+            <section class="page-card wide" id="adminAccessDenied" hidden>
+                <div class="empty-state wide">
+                    <div class="empty-visual"><svg class="icon"><use href="#icon-shield"></use></svg></div>
+                    <h3>Хандах эрх хүрэлцэхгүй байна</h3>
+                    <p>Энэ хуудсыг зөвхөн админ эрхтэй хэрэглэгч ашиглаж болно. Админ бүртгэлээр <a href="login.html?redirect=admin.html">нэвтэрч орно уу</a>.</p>
+                </div>
+            </section>
+
+            <div id="adminRoot" hidden>
+                <section class="page-card wide">
+                    <div class="page-head">
+                        <div>
+                            <h2>Админ хяналтын самбар</h2>
+                            <p>Захиалгын бүртгэл, төлөвийн удирдлага — database-ээс бодит цагт уншина.</p>
+                        </div>
+                        <button class="secondary-button" type="button" id="adminRefresh">
+                            <svg class="icon"><use href="#icon-refresh"></use></svg>
+                            Сэргээх
+                        </button>
+                    </div>
+
+                    <div class="admin-stats">
+                        <article class="admin-stat stat-total">
+                            <span class="admin-stat-icon"><svg class="icon"><use href="#icon-bag"></use></svg></span>
+                            <div><strong id="statTotal">0</strong><span>Нийт захиалга</span></div>
+                        </article>
+                        <article class="admin-stat stat-new">
+                            <span class="admin-stat-icon"><svg class="icon"><use href="#icon-sparkles"></use></svg></span>
+                            <div><strong id="statNew">0</strong><span>Шинэ захиалга</span></div>
+                        </article>
+                        <article class="admin-stat stat-progress">
+                            <span class="admin-stat-icon"><svg class="icon"><use href="#icon-clock"></use></svg></span>
+                            <div><strong id="statProgress">0</strong><span>Боловсруулж байгаа</span></div>
+                        </article>
+                        <article class="admin-stat stat-delivered">
+                            <span class="admin-stat-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                            <div><strong id="statDelivered">0</strong><span>Хүргэгдсэн</span></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="page-card wide">
+                    <div class="page-head">
+                        <div>
+                            <h2>Захиалгууд</h2>
+                            <p>Мөр дээр дарж дэлгэрэнгүй мэдээллийг харж, төлөвийг шууд өөрчилнө үү.</p>
+                        </div>
+                        <span class="count-note" id="adminOrdersCount"></span>
+                    </div>
+
+                    <div class="admin-status-filters" id="adminStatusFilters" role="group" aria-label="Төлөвөөр шүүх"></div>
+
+                    <div class="admin-table-wrap">
+                        <table class="admin-table" id="adminOrdersTable">
+                            <thead>
+                                <tr>
+                                    <th>Захиалга</th>
+                                    <th>Хэрэглэгч</th>
+                                    <th>Хоол</th>
+                                    <th>Очих цаг</th>
+                                    <th>Нийт дүн</th>
+                                    <th>Төлөв</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminOrdersBody"></tbody>
+                        </table>
+                        <div class="empty-state wide" id="adminOrdersEmpty" hidden>
+                            <div class="empty-visual"><svg class="icon"><use href="#icon-bag"></use></svg></div>
+                            <h3>Захиалга олдсонгүй</h3>
+                            <p>Шүүлтээ өөрчлөх эсвэл шинэ захиалгыг хүлээнэ үү.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div class="overlay modal-layout" id="adminDetailOverlay" aria-hidden="true">
+        <div class="modal modal-large" role="dialog" aria-modal="true" aria-labelledby="adminDetailTitle">
+            <div class="modal-header">
+                <h2 id="adminDetailTitle">Захиалгын дэлгэрэнгүй</h2>
+                <button class="close-button" type="button" data-close-overlay aria-label="Хаах">
+                    <svg class="icon"><use href="#icon-close"></use></svg>
+                </button>
+            </div>
+            <div class="modal-content" id="adminDetailContent"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <span>© 2026 Дархан ХААИС зоогийн газар · Админ хэсэг</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
